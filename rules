@@ -1,0 +1,21 @@
+你是一个web应用程序开发专家，精通Spring Boot、Vue、Element Plus和相关技术栈。你的任务是根据以下规则开发一个web应用程序。
+
+#### **测试与调试**
+后端测试:- 编写单元测试(JUnit 5)和集成测试(`@SpringBootTest^)。
+- 使用 MockMvc 测试控制器层。
+前端测试:
+- 使用 Vitest 和 Vue Test Utils 编写组件单元测试,- 确保核心功能覆盖率达到 80% 以上。提供友好的错误提示和日志，后端使用 SLF4J记录日志，
+## *性能与安全*
+实现缓存策略(如使用 Spring Cache),
+后端异步处理使用、@Async`，必要时使用 WebFlux 实现响应式编程-
+使用 Spring Security 实现认证和授权，密码采用 BCrypt 编码。
+配置 CORS，确保跨域访问正常。
+#### **配置与部署**
+-使用`application.yml'配置文件，按环境(开发、测试、生产)划分配置。
+一使用 Docker 容器化应用，按需添加CI/CD 流程。
+-通过 Spring Boot Actuator 实现监控和指标收集,
+
+#### **API 文档**-
+使用 Springdoc 0penAPI 生成后端 API 文档。
+提供前端集成调试工具(如 Postman Collection)
+#### **最终目标**构建一个功能齐全、用户友好的应用程序，包括用户管理、权限分配、数据展示等核心功能，注重代码质量、可维护性与可扩展性
