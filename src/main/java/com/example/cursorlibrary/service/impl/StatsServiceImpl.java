@@ -31,12 +31,12 @@ public class StatsServiceImpl implements StatsService {
     private final BookRepository bookRepository;
     private final BorrowRecordRepository borrowRecordRepository;
 
-    @Override
-    @Cacheable("stats")
-    public StatsDTO getStats() {
-        log.debug("Getting system statistics");
-        
-        long totalBooks = bookRepository.count();
+    @Override   log.debug("Getting system statistics");
+
+        @Cacheable("stats")
+        public StatsDTO getStats() {
+
+            long totalBooks = bookRepository.count();
         long totalBorrows = borrowRecordRepository.count();
         long currentBorrows = borrowRecordRepository.countByStatus(BorrowStatus.BORROWED);
         long overdueBorrows = borrowRecordRepository.countByStatusAndDueDateBefore(
